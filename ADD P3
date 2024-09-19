@@ -1,0 +1,82 @@
+import datetime as dt
+import pandas as pd
+import numpy as np
+tanggal = dt.date.today()
+mahasiswa = ["Adrianus" , 2023071057 , "Informatika", "Desain Analisis Algoritma", tanggal , "UPJ"]
+print("NAMA SAYA : " ,mahasiswa[0])
+print("NIM       : " ,mahasiswa[1])
+print("PRODI     : " ,mahasiswa[2])
+print("MK        : " ,mahasiswa[3])
+print("TANGGAL   : " ,mahasiswa[4])
+print("KAMPUS    : " ,mahasiswa[5])
+print()
+
+
+
+
+#Print dengan slacing
+print(mahasiswa [3:5])
+print(mahasiswa [4:6])
+print(mahasiswa [0:3])
+print()
+
+#cetak nim dan prodi dengan slacing
+print(mahasiswa [1:3])
+print()
+
+bin_colors=['red', 'green', 'blue', 'yellow']
+for aColor in bin_colors:
+  print(aColor + " Squre")
+  print()
+
+
+
+#membuat table nested_tuple
+nested_tuple=["100", "200,400,600", " 300", "400,800"]
+print(nested_tuple)
+print()
+
+#latihan sets
+yellow = {'blood', 'rose', 'dandelions', 'fire hydrant', 'leaves'}
+red = { 'fire hydrant', 'leaves'}
+print(yellow|red)
+print(yellow&red)
+
+
+
+df =pd.DataFrame([
+    ['1','Fares', 32, True],
+    ['2','Elena', 23, False],
+    ['3','S', 40, True],
+])
+
+df.columns = ['id', 'name', 'age', 'decision']
+
+print(df)
+
+print(df[['name', 'age']])
+
+print(df.iloc[:,3])
+print(df.iloc[1:3,:])
+print(df[df.age>30])
+print(df[(df.age>30) & (df.decision==True)])
+
+mhs =pd.DataFrame([
+    [1,'Informatika', 50, 30, 20],
+    [2,'Sistem Informasi', 55, 30, 25],
+    [3,'Teknik Sipil', 45, 30, 10]
+])
+
+mhs.columns = ['No', 'Prodi', 'Mahasiswa', 'Laki-Laki', 'Perempuan']
+
+print(mhs)
+
+myMatrix = np.array([[11,12,13],[21,22,23],[31,32,33]])
+print(myMatrix)
+
+print(type(myMatrix))
+
+matrix = np.array([[100,200,300],[700,600,500],[900,1000,800]])
+print(matrix)
+matrix_t = matrix.transpose()
+print(matrix_t)
